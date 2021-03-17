@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from "./GlobalStyle";
+import styled from "styled-components";
+
+const Header = styled.header`
+  background: var(--text-color);
+  color: var(--background-color);
+  font-size: 3rem;
+  text-align: center;
+
+  b {
+    color: var(--primary-color);
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header>
+        <h1>
+          <b>Rick</b> vs <b>Morty</b>
+        </h1>
+      </Header>
+      <main></main>
+    </>
   );
 }
 
