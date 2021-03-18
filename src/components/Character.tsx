@@ -1,6 +1,11 @@
 import React from "react";
 
-function Character({ name, image }) {
+type CharacterProps = {
+  name: string;
+  image: string;
+};
+
+function Character({ name, image }: CharacterProps) {
   return (
     <article>
       <h3>{name}</h3>
